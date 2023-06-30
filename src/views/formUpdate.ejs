@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/page/employe.css" />
+    <link rel="stylesheet" href="../assets/font/fontawesome-free-6.2.1-web/css/all.min.css"/>
+    <title>Update employee</title>
+</head>
+<body>
+    <div id="form-detail" class="popup" >
+        <form action="/update-employee" method="POST" id="form-employee">
+          <div class="popup-form">
+            <div class="popup-header">
+              <div class="popup-header-left">
+                <div class="popup-title">Thông tin nhân viên</div>
+                <div class="checkbox-wrapper">
+                  <div class="checkbox-item">
+                    <input  type="checkbox" > <span>Là khách hàng</span>
+                  </div>
+                  <div class="checkbox-item">
+                    <input  type="checkbox" > <span>Là nhà cung cấp</span>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-header-right">
+                <button type="button" class="popup-icon btn-icon-ask"></button>
+                <button type="button" id="btn-close" class="popup-icon btn-icon-close"></button>
+              </div>
+            </div>
+            <div class="popup-body">
+              <div class="emplyee-info">
+                 <!-- Thông tin 2 -->
+                <div class="form-group general-info-left">
+                  <input type="text" hidden name="EmployeeID" value="<%= dataUser.EmployeeID %>">
+                  <div class="m-row m-flex m-col-gap-8" > 
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Mã <span class="required">*</span></label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeCode" value="<%= dataUser.EmployeeCode %>">
+                      <small></small>
+                      <span class=""></span>
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeName">Tên <span class = "required">*</span></label>
+                      <input id="txtEmployeeName" type="text" name="EmployeeName" value="<%= dataUser.EmployeeName %>">
+                      <small></small>
+                      <span class=""></span>
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeePosition">Đơn vị <span class="required">*</span></label>
+                      <input id="txtEmployeePosition" type="text" name="EmployeeDeparmentName" value="<%= dataUser.EmployeeDeparmentName %>" > 
+                      <small></small>
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Chức danh</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeePositionName" value="<%= dataUser.EmployeePositionName %>">
+                    </div>
+                  </div>
+  
+                </div>
+                <!-- Thông tin 2 -->
+                <div class="form-group general-info-right">
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper" style="width: 175px;">
+                      <label for="txtEmployeeDOB">Ngày sinh</label>
+                      <input id="txtEmployeeDOB" type="date" name="EmployeeDateOfBirth" value="<%= dataUser.EmployeeDateOfBirth %>">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Giới tính</label>
+                      <div class="render-item">
+                        <input name="render" type="radio" name="EmployeeGender" value="1"><span>Nam</span>
+                        <input name="render" type="radio" name="EmployeeGender" value="2"><span>Nữ</span>
+                        <input name="render" type="radio" name="EmployeeGender" value="0"><span>Khác</span>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Số chứng minh nhân dân">Số CMND</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeIDNumber" value="<%= dataUser.EmployeeIDNumber %>">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Ngày cấp</label>
+                      <input id="txtEmployeeCode" type="date" name="CreatedDate" value="<%= dataUser.CreatedDate %>">
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Nơi cấp</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeAddress" value="<%= dataUser.EmployeeAddress %>">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group contact-info">
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Địa chỉ</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeAddress" value="<%= dataUser.EmployeeAddress %>">
+                    </div>
+                    
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8" style="width: 75%;">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Điện thoại di động">ĐT di động</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeMobilePhoneNumber" value="<%= dataUser.EmployeeMobilePhoneNumber %>">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Điện thoại cố định">ĐT cố định</label>
+                      <input id="txtEmployeeCode" type="text">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeEmail">Email</label>
+                      <input id="txtEmployeeEmail" type="text" name="EmployeeEmail" value="<%= dataUser.EmployeeEmail %>">
+                      <small></small>
+                      <span class=""></span>
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8" style="width: 75%;">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Điện thoại di động">Tài khoản ngân hàng</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeCreditCardNumber" value="<%= dataUser.EmployeeCreditCardNumber %>">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Điện thoại cố định">Tên ngân hàng</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeBankName" value="<%= dataUser.EmployeeBankName %>">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Chi nhánh</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeBankBranch" value="<%= dataUser.EmployeeBankBranch %>">
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            <div class="popup-footer">
+              <div class="popup-footer-right">
+                <button class="btn btn-default" type="submit">Cập nhật</button>
+                <!-- <button class="btn" >Cất và thêm</button> -->
+              </div>
+              <div class="popup-footer-left">
+                <button type="button" id="btn-cancel" class="btn">Hủy</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+.menu{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+ .menu .header-logo{
+    box-sizing: border-box;
+    margin-top: 16px;
+    width: 200px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    background-color: #041434;
+    margin-bottom: 24px;
+}
+
+ .menu .header-logo .sidebar{
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/icon/icons8-circled-menu-50.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-left: 16px;
+    
+}
+
+
+.menu .header-logo .logo{
+    width: 28px;
+    height: 28px;
+    background-image: url(../../assets/icon/favicon.ico);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 16px;
+}
+
+.menu .header-logo .accountant{
+    color: #fff;
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.menu .menu-item{
+    display: flex;
+    align-items: center;
+    width: 176px;
+    height: 44px;
+    box-sizing: border-box;
+    margin: 4px 12px;
+    border-radius: 4px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+
+
+.menu-item-selected, .menu .menu-item:hover{
+    background-color: #a7c4ff6b;
+}
+
+.menu .menu-item .menu-icon{
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+
+    /* background-position: center;
+    background-size: cover; */
+}
+
+
+
+.menu .menu-item .icon-general{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -33px -1630px;
+    
+}
+.menu .menu-item .icon-cash{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -78px -1631px;
+}
+.menu .menu-item .icon-bank-build{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -121px -1633px;
+}
+
+.menu .menu-item .icon-buy{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -165px -1632px;
+}
+
+.menu .menu-item .icon-sale{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -206px -1631px;
+}
+
+.menu .menu-item .icon-bill{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -254px -1632px;
+}
+
+
+.menu .menu-item .icon-warehouse{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -294px -1632px;
+}
+
+.menu .menu-item .icon-tools{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -339px -1633px;
+}
+
+.menu .menu-item .icon-asset{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -382px -1632px;
+}
+
+
+.menu .menu-item .icon-vat{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -427px -1634px;
+}
+
+.menu .menu-item .icon-price{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -471px -1633px;
+}
+
+.menu .menu-item .icon-synthetic{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -296px -1662px;
+}
+
+.menu .menu-item .icon-budget{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -427px -1664px;
+}
+
+.menu .menu-item .icon-report{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -552px -1636px;
+}
+
+.menu .menu-item .icon-analyst{
+    background: url(../../assets/Resource/img/Sprites.64af8f61.svg) no-repeat -207px -1667px;
+}
+
+
+
+
+.menu .menu-item .menu-text{
+    margin-left: 12px;
+    color: #fff;
+}

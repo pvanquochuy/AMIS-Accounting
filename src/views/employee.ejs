@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/page/employe.css" />
+    <link rel="stylesheet" href="../assets/font/fontawesome-free-6.2.1-web/css/all.min.css"/>
+    <title>AMIS Kế toán</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <div class="header">
+        <div class="title-bar-left">
+          <div class="icon-menu"></div>
+          <select class="text-title">
+            <option value="1">
+              CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI - DỊCH VỤ QUI PHÚC
+            </option>
+          </select>
+        </div>
+
+        <div class="title-bar-right">
+          <div class="icon-noti"></div>
+          <div class="icon-logo"></div>
+          <div class="text-fullname">Phạm Văn Quốc Huy</div>
+          <div class="icon-down"></div>
+        </div>
+      </div>
+      <!-- menu -->
+      <div class="menu">
+        <div class="header-logo">
+          <div class="sidebar"></div>
+          <div class="logo"></div>
+          <span class="accountant">KẾ TOÁN</span>
+        </div>
+
+        <div class="menu-item menu-item-selected">
+          <div class="menu-icon icon-general "></div>
+          <div class="menu-text">Tổng quan</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-cash"></div>
+          <div class="menu-text">Tiền mặt</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-bank-build"></div>
+          <div class="menu-text">Tiền gửi</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-buy"></div>
+          <div class="menu-text">Mua hàng</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-sale"></div>
+          <div class="menu-text">Bán hàng</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-bill"></div>
+          <div class="menu-text">Quản lý hóa đơn</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-warehouse"></div>
+          <div class="menu-text">Kho</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-tools"></div>
+          <div class="menu-text">Công cụ sử dụng</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-asset"></div>
+          <div class="menu-text">Tài sản cố định</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-vat"></div>
+          <div class="menu-text">Thuế</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-price"></div>
+          <div class="menu-text">Giá thành</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-synthetic"></div>
+          <div class="menu-text">Tổng hơp</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-icon icon-budget"></div>
+          <div class="menu-text">Ngân sách</div>
+        </div>
+        <!-- <div class="menu-item">
+          <div class="menu-icon icon-report"></div>
+          <div class="menu-text">Báo cáo</div>
+        </div> -->
+        <div class="menu-item">
+          <div class="menu-icon icon-analyst"></div>
+          <div class="menu-text">Phân tích tài chính</div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="page">
+          <div class="page-header">
+            <div class="page-title">Nhân viên</div>
+            <div class="page-button">
+              <button id="btn-add" class="btn btn-default btn-icon btn-icon--add-employee">
+                Thêm mới nhân viên
+              </button>
+            </div>
+          </div>
+          <div class="page-container">
+            <div class="table">
+              <div class="table-toolbar">
+                <input type="text" class="input btn-icon btn-icon-search" placeholder="Tìm theo mã, tên nhân viên">
+                <button id="btn-reload" class="btn-reload"></button>
+              </div>
+              
+              <div class="table-container">
+                <table id="tbEmployeeList">
+                  <thead>
+                    <tr>
+                      <!-- <th class="text-align--left" type = "checkbox"><input type="checkbox"></th> -->
+                      <th class="text-align--left" model-name = "EmployeeCode">Mã nhân viên</th>
+                      <th class="text-align--left" model-name = "FullName">Tên nhân viên</th>
+                      <th class="text-align--left" model-name = "Gender">Giới tính</th>
+                      <th class="text-align--center" model-name = "DateOfBirth">Ngày sinh</th>
+                      <th class="text-align--left" title="Số chứng minh nhân dân">Số CMND </th>
+                      <th class="text-align--left" model-name = "PositionName">Chức danh</th>
+                      <th class="text-align--left" model-name = "DepartmentName">Tên đơn vị</th>
+                      <th class="text-align--left">Số tài khoản</th>
+                      <th class="text-align--left">Tên ngân hàng</th>
+                      <th class="text-align--left">Chi nhánh TK ngân hàng</th>
+                      <th class="text-align--left">Chức năng</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% for(let i = 0; i < dataUser.length; i++) { %>
+                      <tr>
+                        <!-- <td class="text-align--left" ><input type="checkbox"></td> -->
+                          <td><%= dataUser[i].EmployeeCode %></td>
+                          <td><%= dataUser[i].EmployeeName %></td>
+                          <td><%= dataUser[i].EmployeeGender %></td>
+                          <td><%= dataUser[i].EmployeeDateOfBirth %></td>
+                          <td><%= dataUser[i].EmployeeIDNumber %></td>
+                          <td><%= dataUser[i].EmployeePositionName %></td>
+                          <td><%= dataUser[i].EmployeeDeparmentName %></td>
+                          <td><%= dataUser[i].EmployeeCreditCardNumber %></td>
+                          <td><%= dataUser[i].EmployeeBankName %></td>
+                          <td><%= dataUser[i].EmployeeBankBranch %></td>
+                          <td class="text-align--left" >
+                              <div class="dropdown-option">
+                                <span class="dropdown-selected" >Sửa</span>
+                                <div  class="dowpdown-icon">
+                                  <div class="dropdownList">
+                                    <div class="dropdown-item">
+                                        <a href = "/detail/employee/<%= dataUser[i].EmployeeCode %>" target="_blank">Chi tiết</a>
+                                    </div>
+                                    <form action="/edit-employee/<%= dataUser[i].EmployeeCode %>" method="get">
+                                      <div class="dropdown-item">
+                                        <button type="submit" target = "_blank">Sửa</button>
+                                    </div>
+                                    </form>
+                                    <form action="/delete-employee" method="post">
+                                      <div class="dropdown-item">
+                                        <input type="text" hidden value="<%= dataUser[i].EmployeeCode %>" name ="employeeCode">
+                                        <button type="submit">Xóa</button>
+                                      </div>
+                                    </form>
+                                </div>
+                              </div>
+                          </td>
+                      </tr>
+                    <% } %> 
+                    
+                    
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-paging">
+                <div class="paging">
+                  <div class="paging-left">
+                    Tổng số: <b><%=dataUser.length %> </b> bản ghi
+                  </div>
+                  <div class="paging-right">
+                    <div class="paging__pagesize">
+                      <div class="pagesize-cbx">
+                          <select name="" id="">
+                            <option value="1" selected = "selected">10 bản ghi trên trang</option>
+                            <option value="2" >50 bản ghi trên trang</option>
+                          </select>
+                          <div class="pagesize-data" hidden>
+                              <a class="pagesize-item pagesize-item--selected">
+                                  <div class="pagesize-item__text">10</div>
+                                  <div class="pagesize-item__icon"></div>
+                              </a>
+                              <a class="pagesize-item">
+                                  <div class="pagesize-item__text">20</div>
+                                  <div class="pagesize-item__icon"></div>
+                              </a>
+                              <a class="pagesize-item">
+                                  <div class="pagesize-item__text">50</div>
+                                  <div class="pagesize-item__icon"></div>
+                              </a>
+                              <a class="pagesize-item">
+                                  <div class="pagesize-item__text">100</div>
+                                  <div class="pagesize-item__icon"></div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="paging__index">
+                            <p>Trước</p>
+                            <div class="number-index">
+                              <p>1</p>
+                              <p>2</p>
+                              <p>3</p>
+                              <p>...</p>
+                              <p>52</p>
+                            </div>
+                            <p>Sau</p>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main -->
+      
+    </div>
+<!-- Form chi tiết nhân viên -->
+    <div id="form-detail" class="popup" hidden>
+        <form action="/create-new-employee" method="POST" id="form-employee">
+          <div class="popup-form">
+            <div class="popup-header">
+              <div class="popup-header-left">
+                <div class="popup-title">Thông tin nhân viên</div>
+                <div class="checkbox-wrapper">
+                  <div class="checkbox-item">
+                    <input  type="checkbox" > <span>Là khách hàng</span>
+                  </div>
+                  <div class="checkbox-item">
+                    <input  type="checkbox" > <span>Là nhà cung cấp</span>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-header-right">
+                <button type="button" class="popup-icon btn-icon-ask"></button>
+                <button type="button" id="btn-close" class="popup-icon btn-icon-close"></button>
+              </div>
+            </div>
+            <div class="popup-body">
+              <div class="emplyee-info">
+                 <!-- Thông tin 2 -->
+                <div class="form-group general-info-left">
+                  
+                  <div class="m-row m-flex m-col-gap-8" >
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Mã <span class="required">*</span></label>
+                      <input id="txtEmployeeCode"  type="text" name="EmployeeCode">
+                      <small></small>
+                      <span class=""></span>
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeName">Tên <span class = "required">*</span></label>
+                      <input id="txtEmployeeName" type="text" name="EmployeeName">
+                      <small></small>
+                      <span class=""></span>
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeePosition">Đơn vị <span class="required">*</span></label>
+                      <input id="txtEmployeePosition" type="text" name="EmployeeDeparmentName"> 
+                      <small></small>
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Chức danh</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeePositionName">
+                    </div>
+                  </div>
+  
+                </div>
+                <!-- Thông tin 2 -->
+                <div class="form-group general-info-right">
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper" style="width: 175px;">
+                      <label for="txtEmployeeDOB">Ngày sinh</label>
+                      <input id="txtEmployeeDOB" type="date" name="EmployeeDateOfBirth">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Giới tính</label>
+                      <div class="render-item">
+                        <input name="render" type="radio" name="EmployeeGender" value="1"><span>Nam</span>
+                        <input name="render" type="radio" name="EmployeeGender" value="2"><span>Nữ</span>
+                        <input name="render" type="radio" name="EmployeeGender" value="0"><span>Khác</span>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Số chứng minh nhân dân">Số CMND</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeIDNumber">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Ngày cấp</label>
+                      <input id="txtEmployeeCode" type="date" name="CreatedDate">
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Nơi cấp</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeAddress">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group contact-info">
+                  <div class="m-row m-flex m-col-gap-8">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Địa chỉ</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeAddress">
+                    </div>
+                    
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8" style="width: 75%;">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Điện thoại di động">ĐT di động</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeMobilePhoneNumber">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Điện thoại cố định">ĐT cố định</label>
+                      <input id="txtEmployeeCode" type="text">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeEmail">Email</label>
+                      <input id="txtEmployeeEmail" type="text" name="EmployeeEmail">
+                      <small></small>
+                      <span class=""></span>
+                    </div>
+                  </div>
+  
+                  <div class="m-row m-flex m-col-gap-8" style="width: 75%;">
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Điện thoại di động">Tài khoản ngân hàng</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeCreditCardNumber">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode" title="Điện thoại cố định">Tên ngân hàng</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeBankName">
+                    </div>
+                    <div class="input-wrapper">
+                      <label for="txtEmployeeCode">Chi nhánh</label>
+                      <input id="txtEmployeeCode" type="text" name="EmployeeBankBranch">
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            <div class="popup-footer">
+              <div class="popup-footer-right">
+                <button class="btn" >Cất</button>
+                <button class="btn btn-default" type="submit">Cất và thêm</button>
+              </div>
+              <div class="popup-footer-left">
+                <button type="button" id="btn-cancel" class="btn">Hủy</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        
+    </div>
+
+    <div class="toast-messeage" hidden>
+      <div id="toast-box" class="toast-box">
+        <!-- susscess -->
+        <div class="toast-item toast-success">
+          <div class="toast-left">
+            <div class="toast-icon toast-icon-success toast-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast-text-success">
+              <span>Thành công!</span> Công việc đã bị xóa.
+            </div>
+          </div>
+          <div class="toast-right">
+            <div class="toast-right-text"><u>Hoàn tác</u></div>
+            <div class="toast-icon-close"><i class="fas fa-times"></i></div>
+          </div>
+        </div>
+        <!-- error -->
+        <div class="toast-item toast-error">
+          <div class="toast-left">
+            <div class="toast-icon toast-icon-error toast-icon">
+              <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="toast-text-error">
+              <span>Lỗi!</span> Không thể cập nhật được dữ liệu. Vui lòng kiểm
+              tra lại kết nối internet.
+            </div>
+          </div>
+          <div class="toast-right">
+            <div class="toast-icon-close"><i class="fas fa-times"></i></div>
+          </div>
+        </div>
+        <!-- warning -->
+        <div class="toast-item toast-warning">
+          <div class="toast-left">
+            <div class="toast-icon toast-icon-warning toast-icon">
+              <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="toast-text-warning">
+              <span>Cảnh báo!</span> Dữ liệu của bạn đã bị thay đổi bởi người
+              dùng khác.
+            </div>
+          </div>
+          <div class="toast-right">
+            <div class="toast-icon-close"><i class="fas fa-times"></i></div>
+          </div>
+        </div>
+        <!-- info -->
+        <div class="toast-item toast-info">
+          <div class="toast-left">
+            <div class="toast-icon toast-icon-info toast-icon">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="toast-text-info">
+              <span>Thông tin!</span> Bạn nên đọc kĩ nội dung trước khi phê
+              duyệt.
+            </div>
+          </div>
+          <div class="toast-right">
+            <div class="toast-icon-close"><i class="fas fa-times"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+    <script>
+        document.getElementById("btn-add").addEventListener("click", function(){
+            var poppup = document.getElementsByClassName("poppup");
+            poppup[0].style.display = "block";
+        })
+
+        document.getElementById("btn-Action").addEventListener("click", function(){
+            debugger;
+            var toastsBox = document.getElementsByClassName("toast-box");
+            toastsBox[0].style.display = "block";
+     
+            
+            setTimeout(() => {;
+                toastsBox[0].style.display = "none";
+            }, 3000);
+        })
+
+        document.getElementById("btn-Action2-one").addEventListener("click", function(){
+            debugger;
+            var value = document.getElementById("input-one").value;
+
+            if(value == undefined || value == null || value.trim() == "".trim()){ /* if(!value)*/
+                document.getElementById("input-one").style.borderColor = "red";
+
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.innerHTML = "Sai";
+                errorMessage.style.display = 'block';
+            }
+            
+            setTimeout(() => {;
+                toastsBox[0].style.display = "none";
+            }, 3000);
+        })
+    </script>
+     -->
+    <script src="../js/employee.js"></script>
+   
+   
+  </body>
+</html>

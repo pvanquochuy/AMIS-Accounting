@@ -1,0 +1,121 @@
+.toast-box{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /* background-color: aqua; */
+}
+
+.toast-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 1px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+
+.toast-item .toast-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+
+
+
+.toast-item .toast-left .toast-left-text span{
+    font-weight: 700;
+}
+
+
+.toast-item .toast-right{
+     display: flex;
+     column-gap: 16px;
+}
+
+.toast-item .toast-right .toast-icon{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.toast-item .toast-right .toast-right-text{
+    cursor: pointer;
+}
+
+.toast-icon-close{
+    cursor: pointer;
+}
+/*  */
+
+/* toast-left */
+.toast-item .toast-left .toast-icon i{
+    font-size: 20px;
+}
+
+/* success */
+.toast-item .toast-left .toast-icon-success i{
+    
+    color: #50B83C;
+}
+
+.toast-item .toast-left .toast-text-success span{
+    color: #50B83C;
+    font-weight: 700;
+}
+
+
+/* error */
+.toast-item .toast-left .toast-icon-error i{
+    color: #DE3618;
+}
+
+.toast-error .toast-text-error{
+    line-height: 0;
+    padding-right: 10px;
+}
+
+.toast-item .toast-left .toast-text-error span{
+    color: #DE3618;
+    font-weight: 700;
+}
+
+.toast-error .toast-left .toast-text-error{
+    margin-top: 20px;
+}
+
+.toast-text-error u{
+    cursor: pointer;
+}
+
+/* Warning */
+
+
+.toast-item .toast-left .toast-icon-warning i{
+    color: #F49342;
+    
+}
+
+.toast-item .toast-left .toast-text-warning span{
+    color: #F49342;
+    font-weight: 700;
+}
+
+
+/* info */
+.toast-item .toast-left .toast-icon-info i{
+    color: #009eeb;
+    
+}
+
+.toast-item .toast-left .toast-text-info span{
+    color: #009eeb;
+    font-weight: 700;
+}
+
+

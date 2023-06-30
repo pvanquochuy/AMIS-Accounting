@@ -1,0 +1,87 @@
+/* .btn{
+    height: 36px;
+    border-radius: 4px;
+    border: unset;
+    cursor: pointer;
+    padding: 0 12px;
+    color: #fff;
+    min-width: 80px;
+    outline: unset;
+} */
+
+
+.btn {
+    height: 36px;
+    min-width: 80px;
+    border-radius: 4px;
+    padding: 0 12px;
+    border: unset;
+    color: #fff;
+    cursor: pointer;
+    outline: unset;
+}
+
+
+/* .btn-add{
+    height: 36px;
+    background-color: #50B83C;
+    color: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    cursor: pointer;
+} */
+
+.btn-default{
+    background-color: #50B83C !important;
+    color: #FFFFFF !important;
+}
+
+.btn-default:hover, .btn-default:active{
+    background-color: #1e9307 !important;
+}
+
+.btn:hover, .btn:active, .btn:focus{
+    border: 1px solid #978f8f;
+}
+
+.bg--green {
+    background-color: #089740;
+    color: #fff;
+}
+
+
+.btn-icon {
+    background-repeat: no-repeat;
+    background-position-x: 12px;
+    background-position-y: center;
+    background-size: 16px 16px;
+    padding-left: 36px;
+    padding-right: 16px;
+}
+
+.btn-icon--add-employee {
+    background-image: url(../../assets/icon/icons8-add-64.png);
+}
+
+
+
+
+.btn-reload{
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    border: unset;
+    background-color: unset;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 27px;
+    background-image: url(../../assets/icon/icons8-reload.gif);
+    margin-left: 16px;
+    
+}
+
+
+.btn-icon-search{
+    background-image: url(../../assets/icon/search.png);
+}

@@ -1,0 +1,47 @@
+.container{
+    display: grid;
+    grid-template-columns: 200px calc(100vw - 200px);
+    grid-template-rows: 56px calc(100vh - 56px);
+    background-color: #eceef1;
+
+    box-sizing: border-box;
+
+}
+
+.header{
+    grid-column: 2/3;
+}
+
+.menu{
+    background-color: #041434;
+    grid-row: 1/4;
+}
+
+.content{
+    grid-column: 2/3;
+    
+}
+
+
+/* popup */
+
+.emplyee-info{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 24px;
+
+}
+
+.general-info-left{
+    width: calc(50% - 16px);
+}
+
+.general-info-right{
+    width: 50%;
+}
+
+.contact-info{
+    width: 100%;
+}
+

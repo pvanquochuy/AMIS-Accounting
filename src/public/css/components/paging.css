@@ -1,0 +1,180 @@
+.paging {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 100%;
+    background-color: #F5F5F5;
+    border-radius: 0 0 4px 4px;
+}
+
+.paging-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paging__index {
+    margin-left: 12px;
+}
+
+.paging__action {
+    margin-left: 22px;
+}
+
+
+/* PAGING BUTTON */
+
+.paging-button {
+    font-size: 24px;
+    padding: 0;
+    background-color: unset;
+    border: unset;
+    color: #0000007c;
+    cursor: pointer;
+    outline: unset;
+}
+.paging-button:hover {
+    color: #000;
+}
+
+.paging-button+.paging-button {
+    margin-left: 8px;
+}
+
+.paging-button--prev {
+    background-image: url();
+}
+
+/* PAGING SIZE */
+
+.paging__pagesize {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 12px;
+}
+
+.paging__pagesize input {
+    max-width: 75px;
+    height: 36px;
+    outline: unset;
+    background-image: url(../../assets/icon/down.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: calc(100% - 12px) center;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+}
+
+.pagesize-cbx {
+    position: relative;
+    display: flex;
+    border: 1px solid #E0E0E0;
+    height: 26px;
+}
+
+.pagesize-cbx select{
+    border: 1px solid #E0E0E0;
+    color: #000;
+    outline: none;
+}
+
+
+
+.pagesize-data {
+    position: absolute;
+    bottom: calc(100% + 2px);
+    background-color: #fff;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px #171b2a3d;
+    padding: 8px 0px;
+}
+
+.pagesize-item {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    justify-content: space-between;
+    width: 100%;
+    height: 36px;
+    cursor: pointer;
+    padding-left: 14px;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+.pagesize-item:hover {
+    background-color: #E7F5EC;
+}
+
+.pagesize-item__icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+    background-size: contain;
+}
+
+.pagesize-item--selected .pagesize-item__text {
+    color: #50B83C !important;
+}
+
+.pagesize-item--selected .pagesize-item__icon {
+    display: block !important;
+}
+
+
+.paging__index{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    color: #666666;
+    margin-right: 16px;
+    cursor: pointer;
+
+}
+
+.paging__index p:first-child:hover
+,.paging__index p:last-child:hover
+{
+    border: 1px solid #aeaaaa;
+    padding: 3px;
+    color: #000;
+    font-weight: 500;
+    width: 46px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.paging__index .number-index{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+
+.paging__index .number-index p:first-child{
+    border: 1px solid #aeaaaa;
+    padding: 3px;
+    color: #000;
+    font-weight: 500;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+
+}
+
+.paging__index .number-index p:hover{
+    border: 1px solid #aeaaaa;
+    padding: 3px;
+    color: #000;
+    font-weight: 500;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+
+}

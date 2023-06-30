@@ -1,0 +1,153 @@
+
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000ae; 
+}
+
+#popup-detail {
+    /* width: 900px; */
+}
+
+.popup-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    min-width: 250px;
+    border-radius: 4px;
+    min-width: 900px;
+}
+
+.popup-botton{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-image: url(../../assets/icon/Close.svg);
+    width: 24px;
+    height: 24px;
+    border: unset;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.popup-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+
+}
+.popup-header-left{
+    display: flex;
+
+}
+
+.checkbox-wrapper{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.checkbox-item{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.checkbox-item input{
+    width: 20px;
+    height: 20px;
+}
+.popup-header-right{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.popup-icon{
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+.btn-icon-ask{
+    background-image: url(../../assets/icon/icons8-ask-32.png);
+    
+}
+
+.btn-icon-close{
+    background-image: url(../../assets/icon/icons8-close-24.png);
+    
+}
+
+.popup-title{
+    font-size: 24px;
+    font-weight: 700;
+    padding-right: 16px;
+}
+
+
+
+
+.popup-body{
+    padding: 0 24px 24px 24px;
+}
+
+
+.popup-footer{
+    background-color: #F5F5F5;
+    padding: 12px 24px;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup-footer button{
+    border: 1px solid #E0E0E0;
+    color: #212121;
+    background-color: #fff;
+}
+
+.render-item{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.input-wrapper  input[type = "radio"]{
+    width: 20px;
+    height: 20px;
+}
+
+.input-wrapper  input[type = "date"]{
+    padding: 0 12px 0 16px;
+    color: #9E9E9E;
+}
+
+.emplyee-info label{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-wrapper.error small{
+    color: #ff0000;
+}
+
+.input-wrapper.error input{
+    border-color: #ff0000;
+}
+
+
+

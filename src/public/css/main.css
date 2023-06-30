@@ -1,0 +1,116 @@
+
+
+@import url(./components/button.css);
+@import url(./components/combobox.css);
+@import url(./components/dialog-detail.css);
+@import url(./components/input.css);
+@import url(./components/paging.css);
+@import url(./components/table.css);
+@import url(./components/radio.css);
+@import url(./components/dropdown.css);
+
+/* layout */
+@import url(./components/popup.css);
+@import url(./components/toast-message.css);
+@import url(./layout/header.css);
+@import url(./layout/menu.css);
+@import url(./layout/page.css);
+@import url(./page/employe.css);
+@import url(./layout/employeeDetail.css);
+
+
+
+
+.header{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+*{
+    font-family: Huy font;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+@font-face {
+    font-family: Huy font;
+    src: url(../../../assets/font/GoogleSans-Regular.otf);
+}
+
+.main{
+    height: calc(100vh - 56px);
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #EEEFF1;
+
+}
+
+.m-flex{
+    display: flex;
+}
+
+.m-col-gap-8{
+    column-gap: 8px;
+}
+
+.required{
+    color: #ff0000;
+}
+
+.m-row+.m-row{
+    margin-top: 14px;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+
+.text-align--right {
+    text-align: right;
+}
+
+.text-align--left {
+    text-align: left;
+}
+
+.text-align--center {
+    text-align: center;
+}
+
+.m-row>.m-col {
+    padding: 0 6px;
+}
+
+
+
+/* .form-group {
+    flex: 1;
+} */
+/* 
+.m-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+} */
+
+.w-100{
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-1{
+    flex: 1;
+}

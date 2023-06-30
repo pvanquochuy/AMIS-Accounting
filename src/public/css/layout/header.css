@@ -1,0 +1,85 @@
+
+.container .header{
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-bottom: 24px;
+}
+
+
+.title-bar-left{
+    display: flex;
+    align-items: center;
+}
+
+
+ .title-bar-left .icon-menu {
+    width: 20px;
+    height: 20px;
+    min-width: 24px;
+    min-height: 24px;
+    background-image: url(../../assets/icon/icons8-menu-rounded-50.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin: 0 16px 0 10px;
+    
+}
+
+.title-bar-left .text-title {
+    font-size: 14px;
+    border: unset;
+    background-color: unset;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+.title-bar-right{
+    display: flex;
+    align-items: center;
+}
+
+
+.title-bar-right .icon-noti{
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/icon/icons8-bell.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 16px;
+}   
+
+
+.title-bar-right .icon-logo{
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/icon/icons8-avatar-67.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}   
+
+.title-bar-right .text-fullname{
+    
+    margin: 0 8px;
+}  
+
+.title-bar-right .icon-down{
+    width: 10px;
+    height: 10px;
+    background-image: url(../../assets/icon/icons8-expand-arrow-50.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 24px;
+}   
